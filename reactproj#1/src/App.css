@@ -1,0 +1,14 @@
+.card-deck {
+  display: flex;
+  flex-direction: row;
+}
+
+.card {
+  flex: 1;
+  margin: 5% 5%;
+
+}
+
+.display-4, .lead {
+ text-align: center;
+}
