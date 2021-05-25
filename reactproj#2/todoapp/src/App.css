@@ -6,7 +6,7 @@ body {
   background-color: white;
   margin: auto;
   margin-top: 5%!important;
-  width: 30%;
+  width: 40%;
   display: flex;
   flex-direction: column;
   align-items: left;
@@ -22,14 +22,19 @@ body {
       0 20px 0 -10px #eee,
           /* The third layer shadow */
       0 20px 1px -9px rgba(0,0,0,0.15);
-  padding: 15px;
+ padding-top: 15px;
 }
 
-p {
-  display: inline-block;
-  align-items: center;
-}
-
-input, p {
+input {
   margin-left: 10%;
+}
+
+.todo-item {
+  padding-bottom: 25px;
+
+
+}
+
+label {
+  margin-left: 25px;
 }

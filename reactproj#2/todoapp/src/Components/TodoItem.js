@@ -1,14 +1,19 @@
 import '../App.css';
 import React from 'react';
-import todosData from '../todosData';
+
 
 class TodoItem extends React.Component {
     
     render() {
+        const completedStyle = {
+            fontStyle: "italic",
+            color: "#cdcdcd",
+            textDecoration: "line-through"
+        }
         return (
             <div className="todo-item">
-                <input type="checkbox" onChange={() => this.props.handleChange(this.props.item.id)} checked={this.props.completed} />
-                <p>{this.props.item.text}</p>
+                <input className="item" type="checkbox" onChange={() => this.props.handleChange(this.props.item.id)} checked={this.props.item.completed} />
+              <label style={this.props.item.completed ? completedStyle : null }>  {this.props.item.text}</label>
             </div>
         );
     }

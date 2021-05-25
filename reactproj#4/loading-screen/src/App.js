@@ -46,11 +46,7 @@ class App extends React.Component {
     
 
         return (
-          <div>
-
-  
-                
-                
+              <div>
                 <div style={style}>
                   <label style={styles}>Loading Something Cool...</label>
                   <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
