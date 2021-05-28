@@ -2,6 +2,7 @@ import './App.css';
 import React, {useState, useEffect} from 'react';
 import fire from './fire';
 import Login from './Login';
+import Hero from './Hero';
 
 const App = () => {
 
@@ -86,10 +87,20 @@ const App = () => {
 
     return (
       <div>
-        <div class='stars'></div>
+   
+{user  ? (
+
+  <Hero 
+        user={user}
+        handleLogout={handleLogout}
+        />
+   
+) : (     
+<div className="galaxy-login">
+<div class='stars'></div>
 <div class='twinkling'></div>
 <div class='clouds'>   </div>
-        <Login 
+ <Login 
           email={email} 
           setEmail={setEmail}
           password={password} 
@@ -101,7 +112,9 @@ const App = () => {
           emailError={emailError}
           passwordError={passwordError}
          />
-     
+        </div>
+)}
+       
       </div>
     );
   };
