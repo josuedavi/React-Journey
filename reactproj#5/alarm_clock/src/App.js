@@ -1,6 +1,6 @@
 import React from 'react';
 import Clock from './Clock';
-import Form from './Form';
+import Example from './Form';
 import './App.css';
 
 
@@ -21,7 +21,7 @@ class App extends React.Component {
       <div>
         <div style={clockStyle}>
         <Clock />
-         <Form />
+         <Example />
        </div>  
        
       </div>
