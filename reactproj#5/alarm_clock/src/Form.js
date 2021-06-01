@@ -192,7 +192,7 @@ class AlarmSetup extends React.Component {
             console.log("Current time:" + this.state.currentTime + " alarm time:" + this.state.alarmTime);
               if(this.state.currentTime === this.state.alarmTime) {
                 //alert("its time!");
-                props.sound();
+                this.props.play();
               } else {
                 console.log("not yet");
               }
@@ -305,11 +305,11 @@ class AlarmSetup extends React.Component {
     }
 }
 
-const Alarm = () => {
+const Alarm = (props) => {
     const [play, {stop}] = useSound(sound, { volume: 0.2 }); 
     return (
         <div>
-            <AlarmSetup sound={play}/>
+            <AlarmSetup play={play}/>
         </div>
     );
 }
