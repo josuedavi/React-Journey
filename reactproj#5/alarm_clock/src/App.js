@@ -1,7 +1,7 @@
 import React from 'react';
 import Clock from './Clock';
 
-import DropDownData from './Form';
+import Alarm from './Form';
 import './App.css';
 
 
@@ -23,7 +23,7 @@ class App extends React.Component {
         <div style={clockStyle}>
         <Clock />
       
-         <DropDownData />
+         <Alarm />
        </div>  
        
       </div>
