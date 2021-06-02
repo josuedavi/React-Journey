@@ -174,7 +174,7 @@ class AlarmSetup extends React.Component {
         
         setCurrentTime(){
             this.setState({
-              currentTime: new Date().getHours() % 12 + ":" + new Date().getMinutes()
+              currentTime: new Date().getHours() % 12 + ":" + (new Date().getMinutes()< 10 ? "0" + new Date().getMinutes(): new Date().getMinutes())
             });
           }
         
@@ -216,7 +216,7 @@ class AlarmSetup extends React.Component {
         return (
             <form onSubmit={(event) => this.setAlarmTime(event)} className="hrs">
                 <div className="form-group">
-                    <label>Example select
+                    <label>Set Alarm Hour:
                     <select onChange={this.handlehrs} className="form-control" id="exampleFormControlSelect1">
                     <option>1</option>
                     <option>2</option>
@@ -235,7 +235,7 @@ class AlarmSetup extends React.Component {
                 </div>
 
         
-                <label >Example select
+                <label >Set Alarm Minutes:
                 <select onChange={this.handlemin} className="form-control" id="exampleFormControlSelect1">
                 <option>00</option>
                 <option>01</option>
@@ -298,8 +298,11 @@ class AlarmSetup extends React.Component {
                 <option>58</option>
                 <option>59</option>
                 </select>
-                </label>            
-            <button type="submit" value="Submit">Submit</button>
+                </label>        
+                <br />    
+            <button type="submit" value="Submit">Start Alarm</button>
+        
+            
         </form>
         );
     }
@@ -309,7 +312,10 @@ const Alarm = (props) => {
     const [play, {stop}] = useSound(sound, { volume: 0.2 }); 
     return (
         <div>
-            <AlarmSetup play={play}/>
+         
+            <AlarmSetup play={play} />
+
+           
         </div>
     );
 }
